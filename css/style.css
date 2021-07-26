@@ -1,6 +1,7 @@
+@charset "utf-8";
+
 /* === IMPORT === */
 
-@charset "utf-8";
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
 
 
@@ -74,10 +75,11 @@ body {
 	top: 7px;
 }
 
-
-input[type="checkbox"]:checked ~ .menu{
+input[type="checkbox"],
+.header .container .icon-menu {
 	display: none;
 }
+
 
 label {
 	cursor: pointer;
@@ -85,3 +87,86 @@ label {
 	display: flex;
 	align-items: center;
 }
+
+/* === MEDIA QUERY === */
+
+
+@media(max-width:  550px) {
+	.header .container .icon-menu {
+		display: inherit;
+	}
+
+	.header .container .menu.mobile {
+		position: absolute;
+		top: 70px;
+		right: 9.5%;
+		background: rgb(106, 109, 110);
+		width: 250px;
+		border-radius: 5px;
+		z-index: 999;
+	}
+
+	.header .container .menu.mobile::before {
+		content: '';
+		display: block;
+		width: 20px;
+		height: 20px;
+		background: red;
+		background: rgb(106, 109, 110);
+		transform: translate(220px, -7px) rotate(45deg);
+	}
+
+	.header .container .menu.mobile ul li {
+		display: block;
+		margin-left: 0;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+	}
+
+	.header .container .menu.mobile ul li a {
+		color: #fff;
+		padding: 15px;
+		display: block;
+	}
+
+	input[type="checkbox"]:checked ~ .menu{
+		display: none;
+	}
+}
+
+
+
+
+
+
+/* === TEXT STYLE BANNER */
+
+.text {
+	position: relative;
+	z-index: 1;
+	top: 310px;
+	left: 20px;
+}
+
+h1 {
+	color: #fff;
+	font-size: 25px;
+	width: 300px;
+	font-weight: 300;
+	margin-bottom: 20px;
+}
+
+h2 {
+	color: yellow;
+	font-weight: 300;
+}
+
+
+
+/* 
+	Author: Domingos Pedro Nkula
+
+	GitHub: @domingos3000
+	Instagram: @domingos_3000
+	Facebook: /domingos3000
+	Cell Number: +244 944895118
+*/
